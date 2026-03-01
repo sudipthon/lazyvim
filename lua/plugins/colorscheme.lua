@@ -1,20 +1,18 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
--- stylua: ignore
---if true then return {} end
-
--- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
---
--- In your plugin files, you can:
--- * add extra plugins
--- * disable/enabled LazyVim plugins
--- * override the configuration of LazyVim plugins
-  -- add pyright to lspconfig
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "Mofiqul/vscode.nvim",
+    lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd("colorscheme gruvbox")
-    end,
+    opts = {
+      style = "dark", -- This is the 'Dark Modern' equivalent
+      transparent = false,
+      -- italic_comments = true,
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "vscode",
+    },
   },
 }
