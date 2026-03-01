@@ -1,0 +1,13 @@
+{
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "env",
+    "venv",
+    ".venv",
+    "**/postgres_dumps",
+    "**/*.geojson",
+    "**/*.sql.gz",
+    "**/*.json"
+  ]
+}
